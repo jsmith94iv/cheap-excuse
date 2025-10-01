@@ -108,23 +108,135 @@ Cheap Excuse isn’t nostalgia. It’s now. It’s the sound of Brooklyn basemen
     </p>
   </section>
 
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheap Excuse – Raw Punk Rock</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--red:#ff0000;--black:#000;--white:#fff;--gray:#1a1a1a;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Oswald',sans-serif;background:var(--black);color:var(--white);line-height:1.4}
+    img{max-width:100%;display:block}
+    a{color:var(--white);text-decoration:none}
+
+    /* ======  FADE-IN ON SCROLL  ====== */
+    section{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease;}
+    section.show{opacity:1;transform:translateY(0);}
+
+    header{min-height:100vh;background:url('img/hero.jpg') center/cover no-repeat var(--gray);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;}
+    header::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.55);}
+    header *{z-index:2}
+    header h1{font-size:clamp(3rem,10vw,6rem);}
+    header p{font-size:1.4rem;margin-top:.5rem}
+
+    nav{position:sticky;top:0;background:rgba(0,0,0,.85);backdrop-filter:blur(4px);display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;padding:1rem;z-index:10;border-bottom:2px solid var(--red);}
+    nav a{font-weight:600;padding:.3rem .6rem;transition:color .2s}
+    nav a:hover{color:var(--red)}
+
+    section{padding:4rem 1rem;max-width:1100px;margin:auto}
+    .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+    .gallery img{border:3px solid var(--red);transition:transform .3s;filter:grayscale(1)}
+    .gallery img:hover{transform:scale(1.03);filter:grayscale(0)}
+
+    .social{display:flex;justify-content:center;gap:1.2rem;margin-top:1rem}
+    .social svg{width:26px;height:26px;fill:var(--white);transition:fill .2s}
+    .social a:hover svg{fill:var(--red)}
+
+    footer{text-align:center;padding:2rem 1rem;background:var(--gray);font-size:.9rem}
+
+    .embed{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;background:var(--gray);border:3px solid var(--red);margin:1.5rem 0}
+    .embed iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+
+    @media(max-width:600px){nav{gap:.6rem;font-size:.9rem}}
+    /* hot-pink headline for Cheap Excuse */
+    header h1{color:#FF69B4}
+  </style>
+</head>
+
+<body>
+  <!-- ****  HERO  **** -->
+  <header id="home">
+    <h1>Cheap Excuse</h1>
+    <p>Raw. Loud. Unapologetic.</p>
+  </header>
+
+  <!-- ****  NAV  **** -->
+  <nav aria-label="Main">
+    <a href="#home">Home</a>
+    <a href="#music">Music</a>
+    <a href="#video">Video</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ****  MUSIC  **** -->
+  <section id="music">
+    <h2>Stream Our Noise</h2>
+    <div class="embed">
+      <!-- TODO: swap Bandcamp album ID -->
+      <iframe src="https://bandcamp.com/EmbeddedPlayer/album=123456789/size=large/bgcol=000000/linkcol=ff0000/transparent=true/" seamless></iframe>
+    </div>
+  </section>
+
+  <!-- ****  VIDEO  **** -->
+  <section id="video">
+    <h2>Watch | Live | Clips</h2>
+    <div class="embed">
+      <!-- TODO: swap YouTube ID -->
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- ****  GALLERY  –– 10 REAL PICS  –– **** -->
+  <section id="gallery">
+    <h2>Artwork &amp; Live Shots</h2>
+    <div class="grid gallery">
+      <img src="https://raw.githubusercontent.com/jsmith94iv/cheap-excuse/refs/heads/main/img/CE%2010.jpg" alt="CE 10" loading="lazy">
+      <img src="https://raw.githubusercontent.com/jsmith94iv/cheap-excuse/refs/heads/main/img/CE%203.jpg" alt="CE 3" loading="lazy">
+      <img src="https://raw.githubusercontent.com/jsmith94iv/cheap-excuse/refs/heads/main/img/CE%2011.jpg" alt="CE 11" loading="lazy">
+      <img src="https://raw.githubusercontent.com/jsmith94iv/cheap-excuse/refs/heads/main/img/stage%20bass.jpg" alt="Stage Bass" loading="lazy">
+      <img src="https://raw.githubusercontent.com/jsmith94iv/cheap-excuse/refs/heads/main/img/CE%204.jpg" alt="CE 4" loading="lazy">
+      <img src="https://raw.githubusercontent.com/jsmith94iv/cheap-excuse/refs/heads/main/img/CE%206.jpg" alt="CE 6" loading="lazy">
+      <img src="https://raw.githubusercontent.com/jsmith94iv/cheap-excuse/refs/heads/main/img/CE%208.jpg" alt="CE 8" loading="lazy">
+      <img src="https://raw.githubusercontent.com/jsmith94iv/cheap-excuse/refs/heads/main/img/CE%20bass%202.jpg" alt="CE Bass 2" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ****  ABOUT  **** -->
+  <section id="about">
+    <h2>Who We Are</h2>
+    <p>
+      Cheap Excuse is Brooklyn-born and battle-tested—where punk meets melody, heartbreak meets defiance, and every chorus feels like a rally cry. We don’t just scream into the void; we sing through it, loud and unfiltered. Our songs are stitched from the scraps of dead-end jobs, late-night subway rides, and the kind of heartbreak that makes you stronger, not softer.
+
+We blend raw guitars with soaring hooks, spit lyrics that stick, and build anthems for anyone who's ever felt like an outsider with something to prove. We take pride in writing songs that pack an emotional punch and leaves a mark.
+
+Cheap Excuse isn’t nostalgia. It’s now. It’s the sound of Brooklyn basements shaking with belief. If it’s too loud… good.
+    </p>
+  </section>
+
   <!-- ****  CONTACT / SOCIAL  **** -->
   <section id="contact">
     <h2>Hit Us Up</h2>
-    <p>cheap.excuse@email.com</p>
-    <div class="social">
-      <!-- TODO: swap URLs -->
-      <a href="https://instagram.com/cheapexcuse" aria-label="Instagram">
-        <svg viewBox="0 0 24 24"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm6.5-4a1 1 0 100 2 1 1 0 000-2z"/></svg>
-      </a>
-      <a href="https://twitter.com/cheapexcuse" aria-label="Twitter">
-        <svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.67.88-.53 1.56-1.37 1.88-2.38-.83.49-1.74.85-2.7 1.04C18.4 4.27 17.13 3.5 15.72 3.5c-2.65 0-4.8 2.15-4.8 4.8 0 .38.04.75.13 1.1C7.38 9.17 4.26 7.46 2.24 4.8c-.4.68-.63 1.47-.63 2.3 0 1.67.85 3.14 2.14 4.01-.79-.03-1.53-.24-2.18-.6v.06c0 2.33 1.66 4.28 3.86 4.72-.4.1-.83.16-1.27.16-.31 0-.62-.03-.92-.08.63 1.91 2.39 3.3 4.5 3.34-1.65 1.29-3.73 2.06-5.99 2.06-.39 0-.77-.02-1.15-.07 2.13 1.36 4.66 2.16 7.39 2.16 8.87 0 13.72-7.35 13.72-13.72 0-.21 0-.42-.01-.62.94-.68 1.76-1.53 2.41-2.5z"/></svg>
-      </a>
-      <a href="https://facebook.com/cheapexcuse" aria-label="Facebook">
-        <svg viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.35C0 23.41.59 24 1.325 24H12.82v-9.29H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.31h3.59l-.467 3.622h-3.123V24h6.116c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z"/></svg>
-      </a>
-    </div>
-  </section>
+   <!-- ======  SOCIAL-MEDIA BLOCK  ====== -->
+<div class="social-block">
+  <a href="https://www.instagram.com/cheapexcuseband" target="_blank" rel="noopener" title="Instagram">📸</a>
+  <a href="https://www.tiktok.com/@cheapexcuseband" target="_blank" rel="noopener" title="TikTok">🎶</a>
+  <a href=" https://www.youtube.com/@CheapExcuseBand" target="_blank" rel="noopener" title="YouTube">📺</a>
+  <a href="https://www.facebook.com/profile.php?id=61581423912557" target="_blank" rel="noopener" title="Facebook">📘</a>
+  <a href="https://YOUR_HANDLE.bandcamp.com" target="_blank" rel="noopener" title="Bandcamp">💿</a>
+  <a href="mailto:cheap.excuse.band@gmail.com" title="Email">✉️</a>
+</div>
+
+<!-- ======  UNIVERSAL STYLES  ====== -->
+<style>
+  .social-block{display:flex;gap:1.2rem;justify-content:center;font-size:1.6rem}
+  .social-block a{color:var(--blue);transition:transform .3s,filter .3s}
+  .social-block a:hover{transform:scale(1.15);filter:drop-shadow(0 0 8px var(--blue))}
+</style>
 
   <!-- ****  FOOTER  **** -->
   <footer>
@@ -148,3 +260,25 @@ Cheap Excuse isn’t nostalgia. It’s now. It’s the sound of Brooklyn basemen
 </body>
 </html>
 
+
+  <!-- ****  FOOTER  **** -->
+  <footer>
+    &copy; <span id="yr"></span> Cheap Excuse. All rights reserved.
+  </footer>
+
+  <script>
+    /* ---- reveal sections on scroll ---- */
+    const io=new IntersectionObserver((e)=>e.forEach((s)=>{if(s.isIntersecting)s.target.classList.add('show')}),{threshold:.15});
+    document.querySelectorAll('section').forEach((s)=>io.observe(s));
+
+    /* ---- auto year + smooth scroll ---- */
+    document.getElementById('yr').textContent=new Date().getFullYear();
+    document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
+</body>
+</html>
